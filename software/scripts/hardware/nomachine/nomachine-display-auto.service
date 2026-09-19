@@ -1,0 +1,12 @@
+[Unit]
+Description=Choose physical or NoMachine headless desktop at boot
+After=display-manager.service nxserver.service
+Wants=nxserver.service
+
+[Service]
+Type=oneshot
+ExecStart=/home/orin/lianaiwei/scripts/hardware/nomachine/nomachine-display-auto.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=graphical.target

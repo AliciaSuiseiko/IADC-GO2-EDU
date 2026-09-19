@@ -1,0 +1,35 @@
+--- a/src/exploration_planner/tare_planner/src/representation/representation.cpp
++++ b/src/exploration_planner/tare_planner/src/representation/representation.cpp
+@@ -193,8 +193,18 @@ namespace representation_ns {
+             // Check bounds
+             if (voxel.x() >= 0 && voxel.x() < room_mask.rows && 
+                 voxel.y() >= 0 && voxel.y() < room_mask.cols) {
+                 int new_room_id = room_mask.at<int>(voxel.x(), voxel.y());
++                if (new_room_id <= 0) {
++                    // Zero is the room-mask background, not a RoomNode ID.
++                    // Detach viewpoints that move onto a wall/door/background
++                    // after an incremental room-mask update.
++                    if (room_nodes_map_.find(old_room_id) != room_nodes_map_.end()) {
++                        room_nodes_map_[old_room_id].DeleteViewpointId(viewpoint.GetId());
++                    }
++                    viewpoint.SetRoomId(-1);
++                    continue;
++                }
+                 SetViewpointRoomRelation(viewpoint.GetId(), new_room_id); 
+             } else {
+                 RCLCPP_WARN(rclcpp::get_logger("representation"), 
+                             "Viewpoint at (%.2f, %.2f, %.2f) is out of room mask bounds! Voxel: (%d, %d), Mask size: (%d, %d)", 
+--- a/src/exploration_planner/tare_planner/src/sensor_coverage_planner/sensor_coverage_planner_ground.cpp
++++ b/src/exploration_planner/tare_planner/src/sensor_coverage_planner/sensor_coverage_planner_ground.cpp
+@@ -1087,9 +1087,10 @@ void SensorCoveragePlanner3D::RoomNodeListCallback(
+   {
+     if (!it->second.IsAlive())
+     {
++      const int removed_room_id = it->first;
+       it = representation_->GetRoomNodesMapMutable().erase(it);
+       RCLCPP_INFO(this->get_logger(), "Room node %d is not alive, removing it",
+-                 it->first);
++                 removed_room_id);
+     }
+     else
+     {

@@ -1,0 +1,12 @@
+diff --git a/src/extrinsic_latency_calib/src/extrinsicCalib.cpp b/src/extrinsic_latency_calib/src/extrinsicCalib.cpp
+--- a/src/extrinsic_latency_calib/src/extrinsicCalib.cpp
++++ b/src/extrinsic_latency_calib/src/extrinsicCalib.cpp
+@@ -36 +36 @@
+-#include <cv_bridge/cv_bridge.hpp>
++#include <cv_bridge/cv_bridge.h>
+diff --git a/src/extrinsic_latency_calib/src/latencyCalib.cpp b/src/extrinsic_latency_calib/src/latencyCalib.cpp
+--- a/src/extrinsic_latency_calib/src/latencyCalib.cpp
++++ b/src/extrinsic_latency_calib/src/latencyCalib.cpp
+@@ -36 +36 @@
+-#include <cv_bridge/cv_bridge.hpp>
++#include <cv_bridge/cv_bridge.h>

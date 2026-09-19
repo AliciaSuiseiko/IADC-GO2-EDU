@@ -1,0 +1,26 @@
+lidar_type: 1 # Livox = 1
+
+offset:
+  # Mid-360 factory LiDAR-to-IMU calibration.
+  imu_t_lidar: [-0.011, -0.02329, 0.04412]
+  imu_R_lidar:
+    - [1.0, 0.0, 0.0]
+    - [0.0, 1.0, 0.0]
+    - [0.0, 0.0, 1.0]
+
+  # T_lidar_body: Go2 body center expressed in the Mid-360 LiDAR frame.
+  # Measured in the body frame, the center is 0.32 m behind and 0.15 m below
+  # the LiDAR. Applying lidar_R_body gives this LiDAR-frame translation.
+  # Rotation is the inverse of the gravity alignment estimated from three
+  # rigidly mounted bags; yaw still requires a supervised motion validation.
+  lidar_t_body: [-0.110236, 0.006454, -0.335718]
+  lidar_R_body:
+    - [0.68566663, -0.00967062, -0.72785146]
+    - [-0.00967062, 0.99970248, -0.02239272]
+    - [0.72785146, 0.02239272, 0.68536911]
+
+topic_sub:
+  lidar_topic_name: "/livox/lidar"
+  imu_topic_name: "/livox/imu"
+  wheel_topic_name: "/wheel_info"
+  elevator_flag_topic_name: "/LIO/set_elevator_flag"

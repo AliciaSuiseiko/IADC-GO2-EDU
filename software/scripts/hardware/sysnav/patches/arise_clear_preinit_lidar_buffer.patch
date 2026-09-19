@@ -1,0 +1,10 @@
+--- a/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
++++ b/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
+@@ -1320,6 +1320,7 @@
+                         //TODO: IMUInit might be not necessary since it is only for accleration 
+                         imu_Init->imuInit(imuBuf);
+                         IMU_INIT=true;
++                        lidarBuf.clear();
+                         imuBuf.clean(timestamp);
+                         std::cout<<"IMU Initialization Process Finish! "<<std::endl;
+ 

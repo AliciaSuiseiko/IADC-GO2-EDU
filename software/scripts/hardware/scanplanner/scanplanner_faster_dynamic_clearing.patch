@@ -1,0 +1,16 @@
+diff --git a/src/planner/plan_manage/config/planner.yaml b/src/planner/plan_manage/config/planner.yaml
+index 466b454..90d7c68 100644
+--- a/src/planner/plan_manage/config/planner.yaml
++++ b/src/planner/plan_manage/config/planner.yaml
+@@ -46,7 +46,10 @@ scan_planner_node:
+     grid_map.p_hit: 0.85
+     grid_map.p_miss: 0.30
+     grid_map.p_min: 0.12
+-    grid_map.p_max: 0.98
++    # Limit occupancy saturation so a dynamic obstacle normally clears after
++    # two definite free-ray updates instead of three. Keep probabilistic map
++    # memory; a single current Mid-360 frame is too sparse for collision use.
++    grid_map.p_max: 0.95
+     grid_map.p_occ: 0.80
+     grid_map.max_ray_length: 5.0
+     grid_map.vis_height: 0.3

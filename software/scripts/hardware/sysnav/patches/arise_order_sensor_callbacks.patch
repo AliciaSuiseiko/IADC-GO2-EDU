@@ -1,0 +1,45 @@
+--- a/src/slam/arise_slam_mid360/include/arise_slam_mid360/FeatureExtraction/featureExtraction.h
++++ b/src/slam/arise_slam_mid360/include/arise_slam_mid360/FeatureExtraction/featureExtraction.h
+@@ -227,6 +227,8 @@
+         std::vector<rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr> pubEachScan;
+ 
+         rclcpp::CallbackGroup::SharedPtr cb_group_;
++        rclcpp::CallbackGroup::SharedPtr imu_cb_group_;
++        rclcpp::CallbackGroup::SharedPtr odom_cb_group_;
+ 
+         int delay_count_;
+         std::mutex m_buf;
+--- a/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
++++ b/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
+@@ -26,9 +26,15 @@
+ 
+     void featureExtraction::initInterface() {      
+         //! Callback Groups
+-        cb_group_ = create_callback_group(rclcpp::CallbackGroupType::Reentrant);
++        cb_group_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
++        imu_cb_group_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
++        odom_cb_group_ = create_callback_group(rclcpp::CallbackGroupType::MutuallyExclusive);
+         rclcpp::SubscriptionOptions sub_options;
+         sub_options.callback_group = cb_group_;
++        rclcpp::SubscriptionOptions imu_sub_options;
++        imu_sub_options.callback_group = imu_cb_group_;
++        rclcpp::SubscriptionOptions odom_sub_options;
++        odom_sub_options.callback_group = odom_cb_group_;
+ 
+         if(!readGlobalparam(shared_from_this()))
+         {
+@@ -79,12 +85,12 @@
+         subImu = this->create_subscription<sensor_msgs::msg::Imu>(
+             IMU_TOPIC, 10, 
+             std::bind(&featureExtraction::imu_Handler, this,
+-                        std::placeholders::_1), sub_options);
++                        std::placeholders::_1), imu_sub_options);
+ 
+         subOdom = this->create_subscription<nav_msgs::msg::Odometry>(
+             ODOM_TOPIC, 10, 
+             std::bind(&featureExtraction::visual_odom_Handler, this,
+-                        std::placeholders::_1), sub_options);
++                        std::placeholders::_1), odom_sub_options);
+ 
+         // sub_depth_up = this->create_subscription<sensor_msgs::msg::PointCloud2>(
+         //     DepthUP_TOPIC, 2, 

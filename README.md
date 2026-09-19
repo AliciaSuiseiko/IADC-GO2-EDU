@@ -1,4 +1,4 @@
-# IADC GO2 EDU Jetson and Panoramic-Camera Mount
+# IADC GO2 EDU Navigation Platform
 
 <p align="center">
   <img src="assets/jetson-base-cad.png" alt="CAD view of the GO2 EDU Jetson base" width="720">
@@ -8,7 +8,7 @@
   <strong>English</strong> · <a href="README_CN.md">中文</a>
 </p>
 
-This repository records a hardware adaptation developed for a Unitree GO2 EDU navigation platform at HKUST(GZ). The assembly adds a two-level payload structure for onboard computing and panoramic perception while retaining compatibility with the existing robot-mounted sensing frame.
+This repository records the hardware and software integration work developed for a Unitree GO2 EDU navigation platform at HKUST(GZ). It combines a two-level Jetson/X5 payload structure with the scripts, ROS 2 package, validation tools, and upstream patches used during SysNav, LIO, SCAN-Planner, panoramic perception, depth, and tracking experiments.
 
 The work is a derivative of the open-source [GO2-EDU Sensor Layout](https://github.com/zhechen003/GO2-EDU-sensor_layout) by `zhechen003`. The original license and upstream parts are retained. My additions and adaptations focus on the Jetson/power payload base and an elevated Insta360 X5 support rather than the original RealSense holder.
 
@@ -52,6 +52,37 @@ This hardware supported the following engineering work:
 - distributed panoramic depth and open-vocabulary perception experiments.
 
 This repository documents a mechanical adaptation and deployment artifact. It does not claim authorship of the upstream GO2 sensor layout, SysNav, SCAN-Planner, or their algorithms.
+
+## Software and Reproduction Record
+
+The [`software`](software/) directory preserves the integration code that made the experiments repeatable:
+
+- an Insta360 X5 UVC/GStreamer ROS 2 package;
+- safe Go2, Mid-360, LIO, SCAN-Planner, and SysNav launch/diagnostic scripts;
+- panoramic tracking, ReID, spherical-state recovery, and DAP client/server utilities;
+- validation scripts and selected patches against upstream projects.
+
+Many upstream systems were reproduced or adapted with limited algorithmic modification. They are credited with pinned source revisions in [`software/UPSTREAM_COMPONENTS.md`](software/UPSTREAM_COMPONENTS.md). Models, datasets, bags, credentials, and third-party source trees are not redistributed.
+
+## Experiment Records
+
+| SysNav simulation | SCAN-Planner on the X5/Mid-360 platform |
+| --- | --- |
+| <img src="assets/results/sysnav-simulation.jpg" alt="SysNav simulation record" width="420"> | <img src="assets/results/scanplanner-rviz.png" alt="SCAN-Planner trajectory in RViz" width="420"> |
+
+| Panoramic depth | Open-vocabulary detections with depth |
+| --- | --- |
+| <img src="assets/results/dap-depth.png" alt="DAP relative-depth output" width="420"> | <img src="assets/results/dap-detections.jpg" alt="Open-vocabulary detections associated with relative depth" width="420"> |
+
+| Raw Mid-360 projection | Projection after DAP consistency gating |
+| --- | --- |
+| <img src="assets/results/mid360-projection.png" alt="Raw Mid-360 projection on the X5 panorama" width="420"> | <img src="assets/results/mid360-dap-gated.png" alt="Mid-360 points retained after DAP consistency gating" width="420"> |
+
+These images are deployment records rather than claims of new algorithms. The documented SCAN-Planner result is a planner-only trajectory preview; the chassis controller was not running in that capture.
+
+## Detailed Work Log
+
+The complete Chinese timeline, workspace/package explanation, completion boundaries, and handoff sequence are preserved in [`docs/WORKLOG_ZH.md`](docs/WORKLOG_ZH.md). An automatically generated inventory of 13 workspaces and 114 ROS packages is available in [`docs/jetson_ros_inventory_2026-09-20.json`](docs/jetson_ros_inventory_2026-09-20.json).
 
 ## Manufacturing Notes
 

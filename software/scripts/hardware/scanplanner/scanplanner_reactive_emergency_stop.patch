@@ -1,0 +1,73 @@
+diff --git a/src/planner/plan_manage/config/planner.yaml b/src/planner/plan_manage/config/planner.yaml
+index b897b4e..9a1a3f2 100644
+--- a/src/planner/plan_manage/config/planner.yaml
++++ b/src/planner/plan_manage/config/planner.yaml
+@@ -6,7 +6,9 @@ scan_planner_node:
+     fsm.thresh_replan: 1.0
+     fsm.thresh_no_replan: 0.1
+     fsm.planning_horizon: 7.5
+-    fsm.emergency_time: 1.0
++    # Stop before replanning when the current trajectory reaches an obstacle
++    # within this horizon. This includes perception and command latency margin.
++    fsm.emergency_time: 1.5
+     fsm.fail_safe: true
+     fsm.max_replan_fail_count: 1000
+ 
+@@ -20,7 +22,9 @@ scan_planner_node:
+     grid_map.local_update_range_z: 2.5
+     grid_map.map_sliding_en: true
+     grid_map.map_sliding_thresh: 0.2
+-    grid_map.double_cylinder_radius: 0.25
++    # Conservative horizontal envelope for Go2, mount, and tracking error.
++    # SCAN represents the robot as two points in this inflated map.
++    grid_map.double_cylinder_radius: 0.30
+     grid_map.double_cylinder_offset: 0.18
+     grid_map.body_height: 0.4
+     grid_map.obstacles_inflation_z_up: 0.1
+diff --git a/src/planner/plan_manage/src/scan_replan_fsm.cpp b/src/planner/plan_manage/src/scan_replan_fsm.cpp
+index 9c8ddbb..a7b646a 100644
+--- a/src/planner/plan_manage/src/scan_replan_fsm.cpp
++++ b/src/planner/plan_manage/src/scan_replan_fsm.cpp
+@@ -818,26 +818,26 @@ namespace scan_planner
+       Eigen::Vector3d pos_next = info->position_traj_.evaluateDeBoorT(std::min(t + time_step, info->duration_));
+       if (map->getInflateOccupancy(pos, estimateYawFromSegment(pos, pos_next)))
+       {
+-        if (planFromCurrentTraj()) // Make a chance
++        const double time_to_collision = t - t_cur;
++        if (time_to_collision < emergency_time_)
+         {
+-          changeFSMExecState(EXEC_TRAJ, "SAFETY");
+-          return;
++          // Do not continue executing the old trajectory while a synchronous
++          // replan runs. Publish the existing stationary emergency trajectory
++          // first; fail-safe will replan after odometry confirms the stop.
++          RCLCPP_WARN(node_->get_logger(), "Obstacle discovered; emergency stop in %.3fs",
++                      time_to_collision);
++          flag_escape_emergency_ = true;
++          changeFSMExecState(EMERGENCY_STOP, "SAFETY");
+         }
+-        else
++        else if (planFromCurrentTraj())
+         {
+-          if (t - t_cur < emergency_time_) // 0.8s of emergency time
+-          {
+-            RCLCPP_WARN(node_->get_logger(), "Obstacle discovered; emergency stop in %.3fs", t - t_cur);
+-            changeFSMExecState(EMERGENCY_STOP, "SAFETY");
+-          }
+-          else
+-          {
+-            //ROS_WARN("current traj in collision, replan.");
+-            changeFSMExecState(REPLAN_TRAJ, "SAFETY");
+-          }
+-          return;
++          changeFSMExecState(EXEC_TRAJ, "SAFETY");
+         }
+-        break;
++        else
++        {
++          changeFSMExecState(REPLAN_TRAJ, "SAFETY");
++        }
++        return;
+       }
+     }
+   }

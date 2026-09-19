@@ -1,0 +1,18 @@
+[Unit]
+Description=Local workaround: suppress Go2 L1 lidar spin-up by repeating /utlidar/switch OFF
+Documentation=file:/home/orin/lianaiwei/scripts/hardware/go2/go2_lidar_off_guard.sh
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/orin/lianaiwei/scripts/hardware/go2/go2_lidar_off_guard.sh
+Restart=always
+RestartSec=3
+Environment=GO2_IFACE=eth0
+Environment=GO2_LOCAL_IP=192.168.123.99
+Environment=GO2_IP=192.168.123.161
+Environment=GO2_LIDAR_OFF_RATE_HZ=10
+
+[Install]
+WantedBy=default.target

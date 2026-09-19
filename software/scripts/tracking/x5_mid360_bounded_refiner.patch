@@ -1,0 +1,20 @@
+--- a/include/vlcal/calib/visual_camera_calibration.hpp
++++ b/include/vlcal/calib/visual_camera_calibration.hpp
+@@ -10,7 +10,7 @@
+ struct VisualCameraCalibrationParams {
+   VisualCameraCalibrationParams() {
+-    max_outer_iterations = 10;
++    max_outer_iterations = 1;
+     max_inner_iterations = 256;
+ 
+     delta_trans_thresh = 0.1;
+--- a/src/vlcal/calib/visual_camera_calibration.cpp
++++ b/src/vlcal/calib/visual_camera_calibration.cpp
+@@ -149,7 +149,7 @@
+     const Sophus::SE3d T_camera_lidar(values.data());
+     const Sophus::SE3d delta = init_T_camera_lidar.inverse() * T_camera_lidar;
+ 
+-    if (delta.translation().norm() > 0.2 || Eigen::AngleAxisd(delta.rotationMatrix()).angle() > 2.0 * M_PI / 180.0) {
++    if (delta.translation().norm() > 0.05 || Eigen::AngleAxisd(delta.rotationMatrix()).angle() > 1.0 * M_PI / 180.0) {
+       return false;
+     }

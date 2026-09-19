@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>fastlio2_go2_adapter</name>
+  <version>0.1.0</version>
+  <description>Gravity-aligned Mid-360 to Go2 body adapter for FAST-LIO2.</description>
+  <maintainer email="aiwei@example.com">aiwei</maintainer>
+  <license>Apache-2.0</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>geometry_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <export><build_type>ament_cmake</build_type></export>
+</package>

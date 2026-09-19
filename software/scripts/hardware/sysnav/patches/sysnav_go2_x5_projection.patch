@@ -1,0 +1,43 @@
+--- a/src/semantic_mapping/semantic_mapping/cloud_image_fusion.py
++++ b/src/semantic_mapping/semantic_mapping/cloud_image_fusion.py
+@@ -205,1 +205,22 @@
++def scan2pixels_go2_x5(laserCloud):
++    """Project the Go2/Mid-360 cloud into the cropped X5 panorama.
++
++    The FAST-LIO2 adapter expresses the cloud at the Mid-360 origin with axes
++    aligned to the Go2 body. The X5 optical center is 0.32 m behind and 0.31 m
++    above that origin. The panoramic axis convention is otherwise the same as
++    the upstream mecanum/Theta projection.
++    """
++    mecanum_camera_offset = np.array([-0.235, 0.0, 0.13])
++    go2_x5_camera_offset = np.array([-0.32, 0.0, 0.31])
++    offset_delta = mecanum_camera_offset - go2_x5_camera_offset
++
++    # scan2pixels_mecanum sorts laserCloud in place. Apply and then remove the
++    # translation on the same array so its point order stays aligned with the
++    # returned pixel indices.
++    laserCloud[:, :3] += offset_delta
++    try:
++        return scan2pixels_mecanum(laserCloud)
++    finally:
++        laserCloud[:, :3] -= offset_delta
++
+ def scan2pixels_diablo(laserCloud):
+@@ -301,7 +322,7 @@ def grow_cluster_from_min(points, threshold=0.3):
+ 
+ class CloudImageFusion:
+     def __init__(self, platform):
+-        self.platform_list = ['wheelchair', 'mecanum', 'mecanum_sim', 'scannet', 'diablo']
++        self.platform_list = ['wheelchair', 'mecanum', 'mecanum_sim', 'go2_x5', 'scannet', 'diablo']
+ 
+         if platform not in self.platform_list:
+             raise ValueError(f"Invalid platform: {platform}. Available platforms: {self.platform_list}")
+@@ -315,6 +336,8 @@ class CloudImageFusion:
+             self.scan2pixels = scan2pixels_mecanum
+         elif platform == 'mecanum_sim':
+             self.scan2pixels = scan2pixels_mecanum_sim
++        elif platform == 'go2_x5':
++            self.scan2pixels = scan2pixels_go2_x5
+         elif platform == 'scannet':
+             self.scan2pixels = scan2pixels_scannet
+         elif platform == 'diablo':

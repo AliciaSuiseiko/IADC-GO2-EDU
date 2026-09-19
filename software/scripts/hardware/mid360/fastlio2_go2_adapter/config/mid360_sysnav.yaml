@@ -1,0 +1,19 @@
+fastlio2_sysnav_adapter:
+  ros__parameters:
+    imu_topic: "/livox/imu"
+    odom_topic: "/Odometry"
+    cloud_topic: "/cloud_registered"
+    output_odom_topic: "/state_estimation"
+    output_scan_odom_topic: "/aft_mapped_to_init_incremental"
+    output_cloud_topic: "/registered_scan"
+    world_frame: "map"
+    sensor_frame: "sensor"
+    initialization_samples: 200
+    max_initial_gyro_rad_s: 0.03
+    imu_t_lidar: [-0.011, -0.02329, 0.04412]
+    imu_R_lidar: [1.0, 0.0, 0.0,
+                  0.0, 1.0, 0.0,
+                  0.0, 0.0, 1.0]
+    lidar_R_body: [0.68566663, -0.00967062, -0.72785146,
+                   -0.00967062, 0.99970248, -0.02239272,
+                   0.72785146, 0.02239272, 0.68536911]

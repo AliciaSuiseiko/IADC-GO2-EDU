@@ -1,0 +1,3161 @@
+{
+  "root": "<workspace-root>",
+  "workspaces": [
+    {
+      "name": "apexnav_ws",
+      "path": "<workspace-root>/src/apexnav_ws",
+      "packages": [
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/exploration_manager",
+          "name": "exploration_manager",
+          "version": "0.0.0",
+          "description": "The apexnav_planner package",
+          "maintainers": [
+            "zagerzhang"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "exploration_node"
+          ],
+          "launch_files": [
+            "launch/algorithm.launch.py",
+            "launch/algorithm_traj.launch.py",
+            "launch/exploration.launch",
+            "launch/exploration.launch.py",
+            "launch/exploration_traj.launch",
+            "launch/exploration_traj.launch.py",
+            "launch/rviz.launch",
+            "launch/rviz.launch.py",
+            "launch/rviz_traj.launch",
+            "launch/rviz_traj.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/path_searching",
+          "name": "path_searching",
+          "version": "0.0.0",
+          "description": "The path_searching package",
+          "maintainers": [
+            "zagerzhang"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/plan_env",
+          "name": "plan_env",
+          "version": "0.0.0",
+          "description": "The plan_env package",
+          "maintainers": [
+            "zagerzhang"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/trajectory_manager",
+          "name": "trajectory_manager",
+          "version": "0.0.0",
+          "description": "The trajectory_manager package",
+          "maintainers": [
+            "zager"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "traj_server"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/utils/lkh_mtsp_solver",
+          "name": "lkh_mtsp_solver",
+          "version": "0.0.0",
+          "description": "The mtsp solver package",
+          "maintainers": [
+            "zagerzhang"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "tsp_node"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "apexnav_ws",
+          "path": "src/apexnav_ws/src/ApexNav/src/planner/utils/vis_utils",
+          "name": "vis_utils",
+          "version": "0.0.0",
+          "description": "The vis_utils package",
+          "maintainers": [
+            "zagerzhang"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+            "branch": "ros2-jazzy",
+            "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+            "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+            "dirty": false
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/apexnav_ws/src/ApexNav",
+          "branch": "ros2-jazzy",
+          "commit": "1ec9d155fc972fb8a139bd57f43b65247237601e",
+          "origin": "https://github.com/Robotics-STAR-Lab/ApexNav.git",
+          "dirty": false
+        }
+      ]
+    },
+    {
+      "name": "camera_x5_ws",
+      "path": "<workspace-root>/src/camera_x5_ws",
+      "packages": [
+        {
+          "workspace": "camera_x5_ws",
+          "path": "src/camera_x5_ws/src/360_camera_calibration/src/extrinsic_latency_calib",
+          "name": "extrinsic_latency_calib",
+          "version": "0.0.1",
+          "description": "Extrinsic and Latency Calib",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "extrinsicCalib",
+            "latencyCalib"
+          ],
+          "launch_files": [
+            "launch/extrinsic_calib.launch",
+            "launch/latency_calib.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/camera_x5_ws/src/360_camera_calibration",
+            "branch": "jazzy",
+            "commit": "1d70a972c4be9864af20ec7730fa5fe01091559c",
+            "origin": "https://github.com/jizhang-cmu/360_camera.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "camera_x5_ws",
+          "path": "src/camera_x5_ws/src/360_camera_calibration/src/receive_theta",
+          "name": "receive_theta",
+          "version": "0.0.1",
+          "description": "Ricoh Theta Z1 Camera Driver",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "example",
+            "receiveTheta",
+            "uvc_test"
+          ],
+          "launch_files": [
+            "launch/receive_theta_ai_computer.launch",
+            "launch/receive_theta_sensorpod.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/camera_x5_ws/src/360_camera_calibration",
+            "branch": "jazzy",
+            "commit": "1d70a972c4be9864af20ec7730fa5fe01091559c",
+            "origin": "https://github.com/jizhang-cmu/360_camera.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "camera_x5_ws",
+          "path": "src/camera_x5_ws/src/insta360_x5_ros2",
+          "name": "insta360_x5_ros2",
+          "version": "0.1.0",
+          "description": "UVC or GStreamer ROS 2 bridge for Insta360 X5 live video.",
+          "maintainers": [
+            "aiwei"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "x5_camera_node"
+          ],
+          "launch_files": [
+            "launch/x5_camera.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "camera_x5_ws",
+          "path": "src/camera_x5_ws/src/insta360_x5_sdk_ros2",
+          "name": "insta360_x5_sdk_ros2",
+          "version": "0.1.0",
+          "description": "ROS 2 adapter for Insta360 X5 CameraSDK preview streams on Jetson.",
+          "maintainers": [
+            "lianaiwei deployment"
+          ],
+          "licenses": [
+            "Proprietary-SDK-Adapter"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "x5_sdk_node"
+          ],
+          "launch_files": [
+            "launch/x5_sdk.launch.py"
+          ],
+          "git": {}
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/camera_x5_ws/src/360_camera_calibration",
+          "branch": "jazzy",
+          "commit": "1d70a972c4be9864af20ec7730fa5fe01091559c",
+          "origin": "https://github.com/jizhang-cmu/360_camera.git",
+          "dirty": true
+        }
+      ]
+    },
+    {
+      "name": "direct_visual_lidar_calibration_ws",
+      "path": "<workspace-root>/src/direct_visual_lidar_calibration_ws",
+      "packages": [
+        {
+          "workspace": "direct_visual_lidar_calibration_ws",
+          "path": "src/direct_visual_lidar_calibration_ws/src/direct_visual_lidar_calibration",
+          "name": "direct_visual_lidar_calibration",
+          "version": "0.0.0",
+          "description": "LiDAR-Camera calibration based on NID-based direct image-pointcloud registration",
+          "maintainers": [
+            "k.koide"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${example_src}",
+            "${source}_${postfix}",
+            "${test_src}",
+            "AFLDriverTest",
+            "LLVMFuzzer-${name}",
+            "LLVMFuzzer-DSOTest",
+            "LLVMFuzzer-StandaloneInitializeTest",
+            "LLVMFuzzer-Unittest",
+            "abi_compat_diag",
+            "abi_compat_inline_ns",
+            "abi_config_custom",
+            "abi_config_default",
+            "abi_config_noversion",
+            "calibrate",
+            "initial_guess_auto",
+            "initial_guess_manual",
+            "json_benchmarks",
+            "json_cuda",
+            "json_example",
+            "preprocess",
+            "preprocess_map",
+            "viewer",
+            "with_namespace_target",
+            "with_private_system_target",
+            "with_private_target",
+            "without_exceptions",
+            "without_namespace_target"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/direct_visual_lidar_calibration_ws/src/direct_visual_lidar_calibration",
+            "branch": "main",
+            "commit": "02a0dc039f5509708f384be4ff3228e0ae09352d",
+            "origin": "https://github.com/koide3/direct_visual_lidar_calibration.git",
+            "dirty": true
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/direct_visual_lidar_calibration_ws/src/direct_visual_lidar_calibration",
+          "branch": "main",
+          "commit": "02a0dc039f5509708f384be4ff3228e0ae09352d",
+          "origin": "https://github.com/koide3/direct_visual_lidar_calibration.git",
+          "dirty": true
+        }
+      ]
+    },
+    {
+      "name": "dualmap_ws",
+      "path": "<workspace-root>/src/dualmap_ws",
+      "packages": [],
+      "repositories": []
+    },
+    {
+      "name": "elevator_lio_ws",
+      "path": "<workspace-root>/src/elevator_lio_ws",
+      "packages": [
+        {
+          "workspace": "elevator_lio_ws",
+          "path": "src/elevator_lio_ws/src/Elevator-LIO",
+          "name": "lio",
+          "version": "0.1.0",
+          "description": "LiDAR-inertial odometry for continuous localization through elevator motion.",
+          "maintainers": [
+            "Yifan Zhang"
+          ],
+          "licenses": [
+            "GPL-2.0-or-later"
+          ],
+          "build_type": "catkin",
+          "executables": [
+            "lio_node_bin",
+            "sim_node"
+          ],
+          "launch_files": [
+            "launch/start.launch",
+            "launch/start_ros2.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/elevator_lio_ws/src/Elevator-LIO",
+            "branch": "main",
+            "commit": "1d79af77f3d9747ea57ef52a9b01d326a8ec561a",
+            "origin": "https://github.com/xiaofan4122/Elevator-LIO.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "elevator_lio_ws",
+          "path": "src/elevator_lio_ws/src/livox_ros_driver2",
+          "name": "livox_ros_driver2",
+          "version": "1.0.0",
+          "description": "The ROS device driver for Livox 3D LiDARs, for ROS2",
+          "maintainers": [
+            "feng"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${DEMO_NAME}",
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch_ROS1/msg_HAP.launch",
+            "launch_ROS1/msg_MID360.launch",
+            "launch_ROS1/msg_mixed.launch",
+            "launch_ROS1/rviz_HAP.launch",
+            "launch_ROS1/rviz_MID360.launch",
+            "launch_ROS1/rviz_mixed.launch"
+          ],
+          "git": {}
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/elevator_lio_ws/src/Elevator-LIO",
+          "branch": "main",
+          "commit": "1d79af77f3d9747ea57ef52a9b01d326a8ec561a",
+          "origin": "https://github.com/xiaofan4122/Elevator-LIO.git",
+          "dirty": true
+        }
+      ]
+    },
+    {
+      "name": "fastlio2_ros1_ws",
+      "path": "<workspace-root>/src/fastlio2_ros1_ws",
+      "packages": [
+        {
+          "workspace": "fastlio2_ros1_ws",
+          "path": "src/fastlio2_ros1_ws/src/FAST_LIO",
+          "name": "fast_lio",
+          "version": "0.0.0",
+          "description": "This is a modified version of LOAM which is original algorithm is described in the following paper: J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time. Robotics: Science and Systems Conference (RSS). Berkeley, CA, July 2014.",
+          "maintainers": [
+            "claydergc"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [
+            "fastlio_mapping"
+          ],
+          "launch_files": [
+            "launch/gdb_debug_example.launch",
+            "launch/mapping_avia.launch",
+            "launch/mapping_horizon.launch",
+            "launch/mapping_marsim.launch",
+            "launch/mapping_mid360.launch",
+            "launch/mapping_ouster64.launch",
+            "launch/mapping_velodyne.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "fastlio2_ros1_ws",
+          "path": "src/fastlio2_ros1_ws/src/livox_ros_driver2",
+          "name": "livox_ros_driver2",
+          "version": "1.0.0",
+          "description": "The ROS device driver for Livox 3D LiDARs",
+          "maintainers": [
+            "Livox Dev Team"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "",
+          "executables": [
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch_ROS1/msg_AVIA2.launch",
+            "launch_ROS1/msg_HAP.launch",
+            "launch_ROS1/msg_MID360.launch",
+            "launch_ROS1/msg_MID360s.launch",
+            "launch_ROS1/msg_mixed.launch",
+            "launch_ROS1/rviz_AVIA2.launch",
+            "launch_ROS1/rviz_HAP.launch",
+            "launch_ROS1/rviz_MID360.launch",
+            "launch_ROS1/rviz_MID360s.launch",
+            "launch_ROS1/rviz_mixed.launch"
+          ],
+          "git": {}
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "name": "fastlio2_ws",
+      "path": "<workspace-root>/src/fastlio2_ws",
+      "packages": [
+        {
+          "workspace": "fastlio2_ws",
+          "path": "src/fastlio2_ws/src/FAST_LIO_ROS2",
+          "name": "fast_lio",
+          "version": "0.0.0",
+          "description": "This is a modified version of LOAM which is original algorithm is described in the following paper: J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time. Robotics: Science and Systems Conference (RSS). Berkeley, CA, July 2014.",
+          "maintainers": [
+            "claydergc"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "fastlio_mapping"
+          ],
+          "launch_files": [
+            "launch/gdb_debug_example.launch",
+            "launch/mapping.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/fastlio2_ws/src/FAST_LIO_ROS2",
+            "branch": "ros2",
+            "commit": "2fffc570a25d0df172720bac034fbdb6a13d2162",
+            "origin": "https://github.com/Ericsii/FAST_LIO_ROS2.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "fastlio2_ws",
+          "path": "src/fastlio2_ws/src/fastlio2_go2_adapter",
+          "name": "fastlio2_go2_adapter",
+          "version": "0.1.0",
+          "description": "Gravity-aligned Mid-360 to Go2 body adapter for FAST-LIO2.",
+          "maintainers": [
+            "aiwei"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "fastlio2_go2_adapter",
+            "fastlio2_sysnav_adapter"
+          ],
+          "launch_files": [
+            "launch/mid360_go2_adapter.launch.py",
+            "launch/mid360_sysnav_adapter.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "fastlio2_ws",
+          "path": "src/fastlio2_ws/src/livox_ros_driver2",
+          "name": "livox_ros_driver2",
+          "version": "1.0.0",
+          "description": "The ROS device driver for Livox 3D LiDARs, for ROS2",
+          "maintainers": [
+            "feng"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${DEMO_NAME}",
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch_ROS1/msg_HAP.launch",
+            "launch_ROS1/msg_MID360.launch",
+            "launch_ROS1/msg_mixed.launch",
+            "launch_ROS1/rviz_HAP.launch",
+            "launch_ROS1/rviz_MID360.launch",
+            "launch_ROS1/rviz_mixed.launch"
+          ],
+          "git": {}
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/fastlio2_ws/src/FAST_LIO_ROS2",
+          "branch": "ros2",
+          "commit": "2fffc570a25d0df172720bac034fbdb6a13d2162",
+          "origin": "https://github.com/Ericsii/FAST_LIO_ROS2.git",
+          "dirty": true
+        }
+      ]
+    },
+    {
+      "name": "scanplanner_ws",
+      "path": "<workspace-root>/src/scanplanner_ws",
+      "packages": [
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/bspline_opt",
+          "name": "bspline_opt",
+          "version": "0.1.0",
+          "description": "B-spline trajectory optimization for SCAN-Planner.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/path_searching",
+          "name": "path_searching",
+          "version": "0.1.0",
+          "description": "Dynamic A-star path search for SCAN-Planner.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/plan_env",
+          "name": "plan_env",
+          "version": "0.1.0",
+          "description": "Local occupancy map and ray casting for SCAN-Planner.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/plan_manage",
+          "name": "scan_planner",
+          "version": "0.1.0",
+          "description": "SCAN-Planner ROS 2 nodes, controllers, launch and configuration.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${target}",
+            "scan_planner_node"
+          ],
+          "launch_files": [
+            "launch/run.launch.py",
+            "launch/rviz.launch.py",
+            "launch/simulator.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/scan_planner_msgs",
+          "name": "scan_planner_msgs",
+          "version": "0.1.0",
+          "description": "ROS 2 interfaces used by SCAN-Planner.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/planner/traj_utils",
+          "name": "traj_utils",
+          "version": "0.1.0",
+          "description": "Trajectory primitives and visualization for SCAN-Planner.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/Utils/go2_description",
+          "name": "go2_description",
+          "version": "2.0.0",
+          "description": "Unitree Go2 description, RViz2 and Gazebo Fortress simulation.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [
+            "launch/go2_rviz.launch.py",
+            "launch/go2_sim.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/Utils/odom_visualization",
+          "name": "odom_visualization",
+          "version": "0.1.0",
+          "description": "Odometry visualization and TF publisher.",
+          "maintainers": [
+            "Shaojie Shen"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "odom_visualization"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/Utils/pose_utils",
+          "name": "pose_utils",
+          "version": "0.1.0",
+          "description": "Armadillo-based pose conversion utilities.",
+          "maintainers": [
+            "Shaojie Shen"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/Utils/waypoint_generator",
+          "name": "waypoint_generator",
+          "version": "0.1.0",
+          "description": "RViz goal to waypoint path converter.",
+          "maintainers": [
+            "Shaojie Shen"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "waypoint_generator"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/local_sensing",
+          "name": "local_sensing_node",
+          "version": "0.2.0",
+          "description": "CPU and OpenGL local sensor simulation for SCAN-Planner.",
+          "maintainers": [
+            "Fanze Kong"
+          ],
+          "licenses": [
+            "GPL-3.0-only"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "opengl_render_node",
+            "pcl_render_node"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/map_generator",
+          "name": "map_generator",
+          "version": "0.1.0",
+          "description": "PCD map publisher for SCAN-Planner simulation.",
+          "maintainers": [
+            "SCAN-Planner maintainers"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "map_pub"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "scanplanner_ws",
+          "path": "src/scanplanner_ws/src/SCAN-Planner/src/simulator/mockamap",
+          "name": "mockamap",
+          "version": "0.1.0",
+          "description": "Procedural point-cloud map generator.",
+          "maintainers": [
+            "William Wu"
+          ],
+          "licenses": [
+            "GPL-3.0-only"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "mockamap_node"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+            "branch": "ros2-community",
+            "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+            "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+            "dirty": false
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/scanplanner_ws/src/SCAN-Planner",
+          "branch": "ros2-community",
+          "commit": "d0b921c9b05a6d291d144d60882b2e0e88d2c0e0",
+          "origin": "https://github.com/wuyi2121/SCAN-Planner.git",
+          "dirty": false
+        }
+      ]
+    },
+    {
+      "name": "sru_ws",
+      "path": "<workspace-root>/src/sru_ws",
+      "packages": [
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_collision_monitor",
+          "name": "b2w_collision_monitor",
+          "version": "0.0.1",
+          "description": "B2W collision detection node for force-torque and pointcloud-based collision monitoring.",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_controllers",
+          "name": "b2w_controllers",
+          "version": "0.0.0",
+          "description": "TODO: Package description",
+          "maintainers": [
+            "perfrivik"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "b2w_controllers"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_description_ros2",
+          "name": "b2w_description_ros2",
+          "version": "0.0.0",
+          "description": "TODO: Package description",
+          "maintainers": [
+            "perfrivik"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [
+            "launch/load.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_gazebo_ros2",
+          "name": "b2w_gazebo_ros2",
+          "version": "0.1.0",
+          "description": "Gazebo simulation for b2w",
+          "maintainers": [
+            "perfrivik"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [
+            "launch/b2w_gazebo.launch.py",
+            "launch/gazebo.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_joystick_control",
+          "name": "b2w_joystick_control",
+          "version": "1.0.0",
+          "description": "Joystick teleoperation control for B2W robot",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "joystick_teleop_node"
+          ],
+          "launch_files": [
+            "launch/joystick_teleop.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/b2w_sim/b2w_sim_worlds",
+          "name": "b2w_sim_worlds",
+          "version": "0.1.0",
+          "description": "Mesh World for B2W simulation",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "publish_mesh_node"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        },
+        {
+          "workspace": "sru_ws",
+          "path": "src/sru_ws/src/sru-robot-deployment/rl_nav_controller",
+          "name": "rl_nav_controller",
+          "version": "1.0.0",
+          "description": "Reinforcement Learning-based Navigation Controller for autonomous robot navigation",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "rl_nav_controller"
+          ],
+          "launch_files": [
+            "launch/rl_nav_controller.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+            "branch": "main",
+            "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+            "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+            "dirty": true
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/sru_ws/src/sru-robot-deployment",
+          "branch": "main",
+          "commit": "568a96c6c704d9dede4d7293fa09b98d9cbff4e0",
+          "origin": "https://github.com/leggedrobotics/sru-robot-deployment.git",
+          "dirty": true
+        }
+      ]
+    },
+    {
+      "name": "sysnav_official_ws",
+      "path": "<workspace-root>/src/sysnav_official_ws",
+      "packages": [
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/local_planner",
+          "name": "local_planner",
+          "version": "0.0.1",
+          "description": "Local Planner",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "localPlanner",
+            "pathFollower"
+          ],
+          "launch_files": [
+            "launch/local_planner.launch",
+            "launch/local_planner.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/sensor_scan_generation",
+          "name": "sensor_scan_generation",
+          "version": "0.0.1",
+          "description": "sensor_scan_generation is a package to generate scan data in sensor frame with registered_scan in map frame.",
+          "maintainers": [
+            "Hongbiao Zhu"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "sensorScanGeneration"
+          ],
+          "launch_files": [
+            "launch/sensor_scan_generation.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/terrain_analysis",
+          "name": "terrain_analysis",
+          "version": "0.0.1",
+          "description": "Terrain Analysis",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "terrainAnalysis"
+          ],
+          "launch_files": [
+            "launch/terrain_analysis.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/terrain_analysis_ext",
+          "name": "terrain_analysis_ext",
+          "version": "0.0.1",
+          "description": "Terrain Analysis in Extended Scale",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "terrainAnalysisExt"
+          ],
+          "launch_files": [
+            "launch/terrain_analysis_ext.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/vehicle_simulator",
+          "name": "vehicle_simulator",
+          "version": "0.0.1",
+          "description": "Vehicle Simulator",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "sim_image_repub",
+            "vehicleSimulator"
+          ],
+          "launch_files": [
+            "launch/system_bagfile.launch",
+            "launch/system_bagfile_with_exploration_planner.launch",
+            "launch/system_real_robot.launch",
+            "launch/system_real_robot_with_exploration_planner_4090.launch",
+            "launch/system_real_robot_with_exploration_planner_go2.launch",
+            "launch/system_simulation.launch",
+            "launch/system_simulation_with_exploration_planner.launch",
+            "launch/vehicle_simulator.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/visualization_tools",
+          "name": "visualization_tools",
+          "version": "0.0.1",
+          "description": "Visulization Tools",
+          "maintainers": [
+            "Hongbiao Zhu"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "visualizationTools"
+          ],
+          "launch_files": [
+            "launch/visualization_tools.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/base_autonomy/waypoint_example",
+          "name": "waypoint_example",
+          "version": "0.0.1",
+          "description": "Waypoint Example",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "waypointExample"
+          ],
+          "launch_files": [
+            "launch/waypoint_example.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/exploration_planner/tare_planner",
+          "name": "tare_planner",
+          "version": "0.0.1",
+          "description": "TARE Exploration Planner for Ground Vehicles",
+          "maintainers": [
+            "Chao Cao"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "navigationBoundary",
+            "room_segmentation",
+            "tare_planner_node"
+          ],
+          "launch_files": [
+            "launch/explore.launch",
+            "launch/explore_tunnel.launch",
+            "launch/explore_world.launch",
+            "launch/explore_world_sim.launch",
+            "launch/room_segmentation.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/route_planner/boundary_handler",
+          "name": "boundary_handler",
+          "version": "0.0.1",
+          "description": "Boundary Graph Extractor",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}"
+          ],
+          "launch_files": [
+            "launch/boundary_handler.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/route_planner/graph_decoder",
+          "name": "graph_decoder",
+          "version": "0.0.1",
+          "description": "Visibility Graph Decoder",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}"
+          ],
+          "launch_files": [
+            "launch/decoder.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/route_planner/visibility_graph_msg",
+          "name": "visibility_graph_msg",
+          "version": "0.0.1",
+          "description": "Visibility Graph Message",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/semantic_mapping",
+          "name": "semantic_mapping",
+          "version": "0.0.0",
+          "description": "Semantic mapping node for TARE planner",
+          "maintainers": [
+            "Zihan Liu"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "detection_node",
+            "semantic_mapping_node"
+          ],
+          "launch_files": [
+            "launch/detection_node.launch",
+            "launch/semantic_mapping_real.launch",
+            "launch/semantic_mapping_sim.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/slam/arise_slam_mid360",
+          "name": "arise_slam_mid360",
+          "version": "0.0.0",
+          "description": "This is an implementation of arise_slam, which is based on LOAM algorithm. LOAM is described in the following paper: J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time. Robotics: Science and Systems Conference (RSS). Berkeley, CA, July 2014.",
+          "maintainers": [
+            "Guofei Chen"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "feature_extraction_node",
+            "imu_preintegration_node",
+            "laser_mapping_node"
+          ],
+          "launch_files": [
+            "launch/arize_slam.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/slam/arise_slam_mid360_msgs",
+          "name": "arise_slam_mid360_msgs",
+          "version": "0.0.0",
+          "description": "The arise_slam_mid360_msgs package",
+          "maintainers": [
+            "Guofei Chen"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/slam/dependency/Sophus",
+          "name": "sophus",
+          "version": "1.1.0",
+          "description": "C++ implementation of Lie Groups using Eigen.",
+          "maintainers": [
+            "Daniel Stonier"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/slam/dependency/ceres-solver",
+          "name": "ceres-solver",
+          "version": "2.2.0",
+          "description": "A large scale non-linear optimization library.",
+          "maintainers": [
+            "The Ceres Solver Authors"
+          ],
+          "licenses": [
+            "New BSD"
+          ],
+          "build_type": "cmake",
+          "executables": [
+            "${NAME}_test",
+            "autodiff_benchmarks",
+            "bicubic_interpolation",
+            "bicubic_interpolation_analytic",
+            "block_jacobi_preconditioner_benchmark",
+            "bundle_adjuster",
+            "circle_fit",
+            "curve_fitting",
+            "curve_fitting_c",
+            "denoising",
+            "dense_linear_solver_benchmark",
+            "ellipse_approximation",
+            "evaluation_benchmark",
+            "helloworld",
+            "helloworld_analytic_diff",
+            "helloworld_numeric_diff",
+            "invert_psd_matrix_benchmark",
+            "jet_operator_benchmark",
+            "libmv_bundle_adjuster",
+            "libmv_homography",
+            "more_garbow_hillstrom",
+            "nist",
+            "parallel_vector_operations_benchmark",
+            "pose_graph_2d",
+            "pose_graph_3d",
+            "powell",
+            "robot_pose_mle",
+            "robust_curve_fitting",
+            "rosenbrock",
+            "rosenbrock_analytic_diff",
+            "rosenbrock_numeric_diff",
+            "sampled_function",
+            "schur_eliminator_benchmark",
+            "simple_bundle_adjuster",
+            "small_blas_gemm_benchmark",
+            "small_blas_gemv_benchmark",
+            "spmv_benchmark"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/slam/dependency/gtsam",
+          "name": "gtsam",
+          "version": "4.3.0",
+          "description": "gtsam",
+          "maintainers": [
+            "Frank Dellaert",
+            "Fan Jiang",
+            "José Luis Blanco-Claraco"
+          ],
+          "licenses": [
+            "BSD-3-Clause",
+            "BSD-3-Clause",
+            "BSD-3-Clause",
+            "MPL-2.0",
+            "MIT",
+            "Apache-2.0",
+            "MPL-2.0"
+          ],
+          "build_type": "cmake",
+          "executables": [
+            "${EXAMPLE}",
+            "${PROJECT_NAME}",
+            "${TOOL}",
+            "${compile_snippet_target}",
+            "${example}",
+            "${targetname}",
+            "Tutorial_sparse_example",
+            "bug1213",
+            "cmpfillin",
+            "example",
+            "example_${example}",
+            "fis",
+            "gkgraph",
+            "gksort",
+            "gpmetis",
+            "graphchk",
+            "m2gmetis",
+            "main",
+            "mandelbrot",
+            "mpmetis",
+            "ndmetis",
+            "ngsforward",
+            "ngsinverse",
+            "quaternion_demo",
+            "random_cpp11",
+            "regularize",
+            "rw",
+            "smooth",
+            "spbenchsolver",
+            "spsolver",
+            "strings",
+            "test_embed",
+            "test_sparseLU"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/unitree_webrtc_ros",
+          "name": "unitree_webrtc_ros",
+          "version": "0.1.0",
+          "description": "ROS 2 interface for Unitree Go2 robot using WebRTC connection",
+          "maintainers": [
+            "Haokun Zhu"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_python",
+          "executables": [],
+          "launch_files": [
+            "launch/unitree_control.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/ROS-TCP-Endpoint",
+          "name": "ros_tcp_endpoint",
+          "version": "0.7.0",
+          "description": "ROS TCP Endpoint Unity Integration (ROS2 version) Acts as the bridge between Unity messages sent via TCP socket and ROS messages.",
+          "maintainers": [
+            "Unity Robotics"
+          ],
+          "licenses": [
+            "Apache 2.0"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "default_server_endpoint"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/domain_bridge",
+          "name": "domain_bridge",
+          "version": "0.5.0",
+          "description": "ROS 2 Domain Bridge",
+          "maintainers": [
+            "Jacob Perron"
+          ],
+          "licenses": [
+            "Apache 2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}_exec",
+            "${PROJECT_NAME}_rti_exec"
+          ],
+          "launch_files": [
+            "launch/domain_bridge.launch",
+            "test/test_domain_bridge.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/goalpoint_rviz_plugin",
+          "name": "goalpoint_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Goalpoint RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/livox_ros_driver2",
+          "name": "livox_ros_driver2",
+          "version": "1.0.0",
+          "description": "The ROS device driver for Livox 3D LiDARs, for ROS2",
+          "maintainers": [
+            "feng"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${DEMO_NAME}",
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch_ROS1/msg_HAP.launch",
+            "launch_ROS1/msg_MID360.launch",
+            "launch_ROS1/msg_mixed.launch",
+            "launch_ROS1/rviz_HAP.launch",
+            "launch_ROS1/rviz_MID360.launch",
+            "launch_ROS1/rviz_mixed.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/receive_theta",
+          "name": "receive_theta",
+          "version": "0.0.1",
+          "description": "Ricoh Theta Z1 Camera Driver",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "example",
+            "receiveTheta",
+            "uvc_test"
+          ],
+          "launch_files": [
+            "launch/receive_theta_ai_computer.launch",
+            "launch/receive_theta_sensorpod.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/rviz_2d_overlay_plugins/rviz_2d_overlay_msgs",
+          "name": "rviz_2d_overlay_msgs",
+          "version": "1.4.1",
+          "description": "Messages describing 2D overlays for RVIZ, extracted/derived from the jsk_visualization ROS1 packege.",
+          "maintainers": [
+            "Team Spatzenhirn"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/rviz_2d_overlay_plugins/rviz_2d_overlay_plugins",
+          "name": "rviz_2d_overlay_plugins",
+          "version": "1.4.1",
+          "description": "RViz2 plugin for 2D overlays in the 3D view. Mainly a ROS2 port of the JSK overlay plugin (https://github.com/jsk-ros-pkg/jsk_visualization).",
+          "maintainers": [
+            "Team Spatzenhirn",
+            "Jonas Otto",
+            "Dominik Authaler"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "string_to_overlay_text"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/serial",
+          "name": "serial",
+          "version": "1.2.1",
+          "description": "Serial is a cross-platform, simple to use library for using serial ports on computers. This library provides a C++, object oriented interface for interacting with RS-232 like devices on Linux and Windows.",
+          "maintainers": [
+            "William Woodall"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/teleop_joy_controller",
+          "name": "teleop_joy_controller",
+          "version": "0.0.1",
+          "description": "Teleop with Joystick Controller",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "teleopJoyController"
+          ],
+          "launch_files": [
+            "launch/teleop_joy_controller.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/teleop_rviz_plugin",
+          "name": "teleop_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Teleop RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/teleop_rviz_plugin_plus",
+          "name": "teleop_rviz_plugin_plus",
+          "version": "0.0.1",
+          "description": "Teleop RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/utilities/waypoint_rviz_plugin",
+          "name": "waypoint_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Waypoint RVIZ Plugin",
+          "maintainers": [
+            "Chao Cao"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "sysnav_official_ws",
+          "path": "src/sysnav_official_ws/src/SysNav/src/vlm_node",
+          "name": "vlm_node",
+          "version": "0.0.0",
+          "description": "Vision-Language Model reasoning node for object navigation",
+          "maintainers": [
+            "haokun_ros"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "keyboard_input",
+            "vlm_reasoning_node"
+          ],
+          "launch_files": [
+            "launch/keyboard_input.launch",
+            "launch/vlm_node.launch",
+            "launch/vlm_node_sim.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+            "branch": "DETACHED",
+            "commit": "478727e5a559be22822d5d093b57431449336287",
+            "origin": "https://github.com/zwandering/SysNav.git",
+            "dirty": false
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/sysnav_official_ws/src/SysNav",
+          "branch": "DETACHED",
+          "commit": "478727e5a559be22822d5d093b57431449336287",
+          "origin": "https://github.com/zwandering/SysNav.git",
+          "dirty": false
+        }
+      ]
+    },
+    {
+      "name": "sysnav_ws",
+      "path": "<workspace-root>/src/sysnav_ws",
+      "packages": [
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/local_planner",
+          "name": "local_planner",
+          "version": "0.0.1",
+          "description": "Local Planner",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "localPlanner",
+            "pathFollower"
+          ],
+          "launch_files": [
+            "launch/local_planner.launch",
+            "launch/local_planner.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/sensor_scan_generation",
+          "name": "sensor_scan_generation",
+          "version": "0.0.1",
+          "description": "sensor_scan_generation is a package to generate scan data in sensor frame with registered_scan in map frame.",
+          "maintainers": [
+            "Hongbiao Zhu"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "sensorScanGeneration"
+          ],
+          "launch_files": [
+            "launch/sensor_scan_generation.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/terrain_analysis",
+          "name": "terrain_analysis",
+          "version": "0.0.1",
+          "description": "Terrain Analysis",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "terrainAnalysis"
+          ],
+          "launch_files": [
+            "launch/terrain_analysis.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/terrain_analysis_ext",
+          "name": "terrain_analysis_ext",
+          "version": "0.0.1",
+          "description": "Terrain Analysis in Extended Scale",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "terrainAnalysisExt"
+          ],
+          "launch_files": [
+            "launch/terrain_analysis_ext.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/vehicle_simulator",
+          "name": "vehicle_simulator",
+          "version": "0.0.1",
+          "description": "Vehicle Simulator",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "sim_image_repub",
+            "vehicleSimulator"
+          ],
+          "launch_files": [
+            "launch/system_bagfile.launch",
+            "launch/system_bagfile_with_exploration_planner.launch",
+            "launch/system_real_robot.launch",
+            "launch/system_real_robot_with_exploration_planner_4090.launch",
+            "launch/system_real_robot_with_exploration_planner_go2.launch",
+            "launch/system_simulation.launch",
+            "launch/system_simulation_with_exploration_planner.launch",
+            "launch/vehicle_simulator.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/visualization_tools",
+          "name": "visualization_tools",
+          "version": "0.0.1",
+          "description": "Visulization Tools",
+          "maintainers": [
+            "Hongbiao Zhu"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "visualizationTools"
+          ],
+          "launch_files": [
+            "launch/visualization_tools.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/base_autonomy/waypoint_example",
+          "name": "waypoint_example",
+          "version": "0.0.1",
+          "description": "Waypoint Example",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "waypointExample"
+          ],
+          "launch_files": [
+            "launch/waypoint_example.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/exploration_planner/tare_planner",
+          "name": "tare_planner",
+          "version": "0.0.1",
+          "description": "TARE Exploration Planner for Ground Vehicles",
+          "maintainers": [
+            "Chao Cao"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "navigationBoundary",
+            "room_segmentation",
+            "tare_planner_node"
+          ],
+          "launch_files": [
+            "launch/explore.launch",
+            "launch/explore_tunnel.launch",
+            "launch/explore_world.launch",
+            "launch/explore_world_sim.launch",
+            "launch/room_segmentation.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/route_planner/boundary_handler",
+          "name": "boundary_handler",
+          "version": "0.0.1",
+          "description": "Boundary Graph Extractor",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}"
+          ],
+          "launch_files": [
+            "launch/boundary_handler.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/route_planner/graph_decoder",
+          "name": "graph_decoder",
+          "version": "0.0.1",
+          "description": "Visibility Graph Decoder",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}"
+          ],
+          "launch_files": [
+            "launch/decoder.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/route_planner/visibility_graph_msg",
+          "name": "visibility_graph_msg",
+          "version": "0.0.1",
+          "description": "Visibility Graph Message",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/semantic_mapping",
+          "name": "semantic_mapping",
+          "version": "0.0.0",
+          "description": "Semantic mapping node for TARE planner",
+          "maintainers": [
+            "Zihan Liu"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "detection_node",
+            "semantic_mapping_node"
+          ],
+          "launch_files": [
+            "launch/detection_node.launch",
+            "launch/semantic_mapping_real.launch",
+            "launch/semantic_mapping_sim.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/slam/arise_slam_mid360",
+          "name": "arise_slam_mid360",
+          "version": "0.0.0",
+          "description": "This is an implementation of arise_slam, which is based on LOAM algorithm. LOAM is described in the following paper: J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time. Robotics: Science and Systems Conference (RSS). Berkeley, CA, July 2014.",
+          "maintainers": [
+            "Guofei Chen"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "feature_extraction_node",
+            "imu_preintegration_node",
+            "laser_mapping_node"
+          ],
+          "launch_files": [
+            "launch/arize_slam.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/slam/arise_slam_mid360_msgs",
+          "name": "arise_slam_mid360_msgs",
+          "version": "0.0.0",
+          "description": "The arise_slam_mid360_msgs package",
+          "maintainers": [
+            "Guofei Chen"
+          ],
+          "licenses": [
+            "GPLv3"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/slam/dependency/Sophus",
+          "name": "sophus",
+          "version": "1.1.0",
+          "description": "C++ implementation of Lie Groups using Eigen.",
+          "maintainers": [
+            "Daniel Stonier"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/slam/dependency/ceres-solver",
+          "name": "ceres-solver",
+          "version": "2.2.0",
+          "description": "A large scale non-linear optimization library.",
+          "maintainers": [
+            "The Ceres Solver Authors"
+          ],
+          "licenses": [
+            "New BSD"
+          ],
+          "build_type": "cmake",
+          "executables": [
+            "${NAME}_test",
+            "autodiff_benchmarks",
+            "bicubic_interpolation",
+            "bicubic_interpolation_analytic",
+            "block_jacobi_preconditioner_benchmark",
+            "bundle_adjuster",
+            "circle_fit",
+            "curve_fitting",
+            "curve_fitting_c",
+            "denoising",
+            "dense_linear_solver_benchmark",
+            "ellipse_approximation",
+            "evaluation_benchmark",
+            "helloworld",
+            "helloworld_analytic_diff",
+            "helloworld_numeric_diff",
+            "invert_psd_matrix_benchmark",
+            "jet_operator_benchmark",
+            "libmv_bundle_adjuster",
+            "libmv_homography",
+            "more_garbow_hillstrom",
+            "nist",
+            "parallel_vector_operations_benchmark",
+            "pose_graph_2d",
+            "pose_graph_3d",
+            "powell",
+            "robot_pose_mle",
+            "robust_curve_fitting",
+            "rosenbrock",
+            "rosenbrock_analytic_diff",
+            "rosenbrock_numeric_diff",
+            "sampled_function",
+            "schur_eliminator_benchmark",
+            "simple_bundle_adjuster",
+            "small_blas_gemm_benchmark",
+            "small_blas_gemv_benchmark",
+            "spmv_benchmark"
+          ],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/slam/dependency/gtsam",
+          "name": "gtsam",
+          "version": "4.3.0",
+          "description": "gtsam",
+          "maintainers": [
+            "Frank Dellaert",
+            "Fan Jiang",
+            "José Luis Blanco-Claraco"
+          ],
+          "licenses": [
+            "BSD-3-Clause",
+            "BSD-3-Clause",
+            "BSD-3-Clause",
+            "MPL-2.0",
+            "MIT",
+            "Apache-2.0",
+            "MPL-2.0"
+          ],
+          "build_type": "cmake",
+          "executables": [
+            "${EXAMPLE}",
+            "${PROJECT_NAME}",
+            "${TOOL}",
+            "${compile_snippet_target}",
+            "${example}",
+            "${targetname}",
+            "Tutorial_sparse_example",
+            "bug1213",
+            "cmpfillin",
+            "example",
+            "example_${example}",
+            "fis",
+            "gkgraph",
+            "gksort",
+            "gpmetis",
+            "graphchk",
+            "m2gmetis",
+            "main",
+            "mandelbrot",
+            "mpmetis",
+            "ndmetis",
+            "ngsforward",
+            "ngsinverse",
+            "quaternion_demo",
+            "random_cpp11",
+            "regularize",
+            "rw",
+            "smooth",
+            "spbenchsolver",
+            "spsolver",
+            "strings",
+            "test_embed",
+            "test_sparseLU"
+          ],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/unitree_webrtc_ros",
+          "name": "unitree_webrtc_ros",
+          "version": "0.1.0",
+          "description": "ROS 2 interface for Unitree Go2 robot using WebRTC connection",
+          "maintainers": [
+            "Haokun Zhu"
+          ],
+          "licenses": [
+            "Apache-2.0"
+          ],
+          "build_type": "ament_python",
+          "executables": [],
+          "launch_files": [
+            "launch/unitree_control.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/ROS-TCP-Endpoint",
+          "name": "ros_tcp_endpoint",
+          "version": "0.7.0",
+          "description": "ROS TCP Endpoint Unity Integration (ROS2 version) Acts as the bridge between Unity messages sent via TCP socket and ROS messages.",
+          "maintainers": [
+            "Unity Robotics"
+          ],
+          "licenses": [
+            "Apache 2.0"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "default_server_endpoint"
+          ],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/domain_bridge",
+          "name": "domain_bridge",
+          "version": "0.5.0",
+          "description": "ROS 2 Domain Bridge",
+          "maintainers": [
+            "Jacob Perron"
+          ],
+          "licenses": [
+            "Apache 2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${PROJECT_NAME}_exec",
+            "${PROJECT_NAME}_rti_exec"
+          ],
+          "launch_files": [
+            "launch/domain_bridge.launch",
+            "test/test_domain_bridge.launch.py"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/goalpoint_rviz_plugin",
+          "name": "goalpoint_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Goalpoint RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/livox_ros_driver2",
+          "name": "livox_ros_driver2",
+          "version": "1.0.0",
+          "description": "The ROS device driver for Livox 3D LiDARs, for ROS2",
+          "maintainers": [
+            "feng"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "${DEMO_NAME}",
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch_ROS1/msg_HAP.launch",
+            "launch_ROS1/msg_MID360.launch",
+            "launch_ROS1/msg_mixed.launch",
+            "launch_ROS1/rviz_HAP.launch",
+            "launch_ROS1/rviz_MID360.launch",
+            "launch_ROS1/rviz_mixed.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/receive_theta",
+          "name": "receive_theta",
+          "version": "0.0.1",
+          "description": "Ricoh Theta Z1 Camera Driver",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "example",
+            "receiveTheta",
+            "uvc_test"
+          ],
+          "launch_files": [
+            "launch/receive_theta_ai_computer.launch",
+            "launch/receive_theta_sensorpod.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/receive_x5",
+          "name": "receive_x5",
+          "version": "0.1.0",
+          "description": "Insta360 X5 UVC panorama adapter for SysNav.",
+          "maintainers": [
+            "SysNav deployment"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "receiveX5"
+          ],
+          "launch_files": [
+            "launch/receive_x5_sensorpod.launch",
+            "launch/receive_x5_tracking.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/rviz_2d_overlay_plugins/rviz_2d_overlay_msgs",
+          "name": "rviz_2d_overlay_msgs",
+          "version": "1.4.1",
+          "description": "Messages describing 2D overlays for RVIZ, extracted/derived from the jsk_visualization ROS1 packege.",
+          "maintainers": [
+            "Team Spatzenhirn"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/rviz_2d_overlay_plugins/rviz_2d_overlay_plugins",
+          "name": "rviz_2d_overlay_plugins",
+          "version": "1.4.1",
+          "description": "RViz2 plugin for 2D overlays in the 3D view. Mainly a ROS2 port of the JSK overlay plugin (https://github.com/jsk-ros-pkg/jsk_visualization).",
+          "maintainers": [
+            "Team Spatzenhirn",
+            "Jonas Otto",
+            "Dominik Authaler"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "string_to_overlay_text"
+          ],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/serial",
+          "name": "serial",
+          "version": "1.2.1",
+          "description": "Serial is a cross-platform, simple to use library for using serial ports on computers. This library provides a C++, object oriented interface for interacting with RS-232 like devices on Linux and Windows.",
+          "maintainers": [
+            "William Woodall"
+          ],
+          "licenses": [
+            "MIT"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/teleop_joy_controller",
+          "name": "teleop_joy_controller",
+          "version": "0.0.1",
+          "description": "Teleop with Joystick Controller",
+          "maintainers": [
+            "Ji Zhang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "teleopJoyController"
+          ],
+          "launch_files": [
+            "launch/teleop_joy_controller.launch"
+          ],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/teleop_rviz_plugin",
+          "name": "teleop_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Teleop RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/teleop_rviz_plugin_plus",
+          "name": "teleop_rviz_plugin_plus",
+          "version": "0.0.1",
+          "description": "Teleop RVIZ Plugin",
+          "maintainers": [
+            "Fan Yang"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/utilities/waypoint_rviz_plugin",
+          "name": "waypoint_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Waypoint RVIZ Plugin",
+          "maintainers": [
+            "Chao Cao"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {}
+        },
+        {
+          "workspace": "sysnav_ws",
+          "path": "src/sysnav_ws/src/SysNav/src/vlm_node",
+          "name": "vlm_node",
+          "version": "0.0.0",
+          "description": "Vision-Language Model reasoning node for object navigation",
+          "maintainers": [
+            "haokun_ros"
+          ],
+          "licenses": [
+            "BSD-3-Clause"
+          ],
+          "build_type": "ament_python",
+          "executables": [
+            "keyboard_input",
+            "vlm_reasoning_node"
+          ],
+          "launch_files": [
+            "launch/keyboard_input.launch",
+            "launch/vlm_node.launch",
+            "launch/vlm_node_sim.launch"
+          ],
+          "git": {}
+        }
+      ],
+      "repositories": []
+    },
+    {
+      "name": "unitree_go2_ws",
+      "path": "<workspace-root>/src/unitree_go2_ws",
+      "packages": [
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/go2_driver",
+          "name": "go2_driver",
+          "version": "1.0.0",
+          "description": "GO2 robot driver package",
+          "maintainers": [
+            "Juan Carlos Manzanares Serrano"
+          ],
+          "licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [
+            "launch/go2_driver.launch.py"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/go2_driver",
+            "branch": "DETACHED",
+            "commit": "5a921a7df9b84b433cb5f62ab38ae4c553d39249",
+            "origin": "https://github.com/Unitree-Go2-Robot/go2_driver.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/go2_interfaces",
+          "name": "go2_interfaces",
+          "version": "1.0.0",
+          "description": "Go2 Interfaces",
+          "maintainers": [
+            "Juan Carlos Manzanares"
+          ],
+          "licenses": [
+            "Apache License, Version 2.0"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/go2_interfaces",
+            "branch": "DETACHED",
+            "commit": "8a26a182952ab5cf3548f31169ff02a052718451",
+            "origin": "https://github.com/Unitree-Go2-Robot/go2_interfaces.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/unitree_ros2/cyclonedds_ws/src/unitree/unitree_api",
+          "name": "unitree_api",
+          "version": "0.0.0",
+          "description": "TODO: Package description",
+          "maintainers": [
+            "Unitree"
+          ],
+          "licenses": [
+            "BSD 3-Clause License"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/unitree_ros2",
+            "branch": "DETACHED",
+            "commit": "0dfa8f2e444713c52c96c7b70c433b2609879a31",
+            "origin": "https://github.com/unitreerobotics/unitree_ros2.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/unitree_ros2/cyclonedds_ws/src/unitree/unitree_go",
+          "name": "unitree_go",
+          "version": "0.0.0",
+          "description": "TODO: Package description",
+          "maintainers": [
+            "Unitree"
+          ],
+          "licenses": [
+            "BSD 3-Clause License"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/unitree_ros2",
+            "branch": "DETACHED",
+            "commit": "0dfa8f2e444713c52c96c7b70c433b2609879a31",
+            "origin": "https://github.com/unitreerobotics/unitree_ros2.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/unitree_ros2/cyclonedds_ws/src/unitree/unitree_hg",
+          "name": "unitree_hg",
+          "version": "0.0.0",
+          "description": "TODO: Package description",
+          "maintainers": [
+            "Unitree"
+          ],
+          "licenses": [
+            "BSD 3-Clause License"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/unitree_ros2",
+            "branch": "DETACHED",
+            "commit": "0dfa8f2e444713c52c96c7b70c433b2609879a31",
+            "origin": "https://github.com/unitreerobotics/unitree_ros2.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "unitree_go2_ws",
+          "path": "src/unitree_go2_ws/src/unitree_ros2/example/src",
+          "name": "unitree_ros2_example",
+          "version": "0.0.0",
+          "description": "Uniree ros2 example",
+          "maintainers": [
+            "Unitree"
+          ],
+          "licenses": [
+            "BSD 3-Clause License"
+          ],
+          "build_type": "ament_cmake",
+          "executables": [
+            "g1_low_level_example",
+            "go2_robot_state_client",
+            "go2_sport_client",
+            "go2_stand_example",
+            "low_level_ctrl",
+            "low_level_ctrl_hg",
+            "read_low_state",
+            "read_low_state_hg",
+            "read_motion_state",
+            "read_wireless_controller",
+            "record_bag"
+          ],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/unitree_go2_ws/src/unitree_ros2",
+            "branch": "DETACHED",
+            "commit": "0dfa8f2e444713c52c96c7b70c433b2609879a31",
+            "origin": "https://github.com/unitreerobotics/unitree_ros2.git",
+            "dirty": false
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/unitree_go2_ws/src/go2_driver",
+          "branch": "DETACHED",
+          "commit": "5a921a7df9b84b433cb5f62ab38ae4c553d39249",
+          "origin": "https://github.com/Unitree-Go2-Robot/go2_driver.git",
+          "dirty": false
+        },
+        {
+          "root": "<workspace-root>/src/unitree_go2_ws/src/go2_interfaces",
+          "branch": "DETACHED",
+          "commit": "8a26a182952ab5cf3548f31169ff02a052718451",
+          "origin": "https://github.com/Unitree-Go2-Robot/go2_interfaces.git",
+          "dirty": false
+        },
+        {
+          "root": "<workspace-root>/src/unitree_go2_ws/src/unitree_ros2",
+          "branch": "DETACHED",
+          "commit": "0dfa8f2e444713c52c96c7b70c433b2609879a31",
+          "origin": "https://github.com/unitreerobotics/unitree_ros2.git",
+          "dirty": false
+        }
+      ]
+    },
+    {
+      "name": "viplanner_ws",
+      "path": "<workspace-root>/src/viplanner_ws",
+      "packages": [
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/joystick_drivers/joy",
+          "name": "joy",
+          "version": "1.15.1",
+          "description": "ROS driver for a generic Linux joystick. The joy package contains joy_node, a node that interfaces a generic Linux joystick to ROS. This node publishes a \"Joy\" message, which contains the current state of each one of the joystick's buttons and axes.",
+          "maintainers": [
+            "Jonathan Bohren"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [
+            "joy_node"
+          ],
+          "launch_files": [
+            "launch/ps4joy.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/joystick_drivers/ps3joy",
+          "name": "ps3joy",
+          "version": "1.15.0",
+          "description": "Playstation 3 SIXAXIS or DUAL SHOCK 3 joystick driver. Driver for the Sony PlayStation 3 SIXAXIS or DUAL SHOCK 3 joysticks. In its current state, this driver is not compatible with the use of other Bluetooth HID devices. The driver listens for a connection on the HID ports, starts the joystick streaming data, and passes the data to the Linux uinput device so that it shows up as a normal joystick.",
+          "maintainers": [
+            "Jonathan Bohren"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [
+            "sixpair"
+          ],
+          "launch_files": [
+            "launch/ps3.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/pathFollower",
+          "name": "path_follower",
+          "version": "0.0.1",
+          "description": "Simple Path Follower for executing the path on the robot",
+          "maintainers": [
+            "Pascal Roth"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch/path_follower.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/planner",
+          "name": "viplanner_node",
+          "version": "1.0.0",
+          "description": "A ROS wrapper for Visual Imperative Planner (VIPlanner) package",
+          "maintainers": [
+            "Pascal Roth"
+          ],
+          "licenses": [
+            "BSD-3"
+          ],
+          "build_type": "",
+          "executables": [],
+          "launch_files": [
+            "launch/rosbag_rec_anymal_mount.launch",
+            "launch/viplanner.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/viplanner_pkgs",
+          "name": "viplanner_pkgs",
+          "version": "1.0.0",
+          "description": "Visual Imperative Planner Packages",
+          "maintainers": [
+            "Pascal Roth"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/visualizer",
+          "name": "viplanner_viz",
+          "version": "1.0.0",
+          "description": "Visualization of the Visual Imperative Planner (VIPlanner) package",
+          "maintainers": [
+            "Pascal Roth"
+          ],
+          "licenses": [
+            "BSD-3"
+          ],
+          "build_type": "",
+          "executables": [
+            "${PROJECT_NAME}_node"
+          ],
+          "launch_files": [
+            "launch/viplannerViz.launch"
+          ],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        },
+        {
+          "workspace": "viplanner_ws",
+          "path": "src/viplanner_ws/src/viplanner/ros/waypoint_rviz_plugin",
+          "name": "waypoint_rviz_plugin",
+          "version": "0.0.1",
+          "description": "Waypoint RVIZ Plugin",
+          "maintainers": [
+            "Chao Cao"
+          ],
+          "licenses": [
+            "BSD"
+          ],
+          "build_type": "",
+          "executables": [],
+          "launch_files": [],
+          "git": {
+            "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+            "branch": "main",
+            "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+            "origin": "https://github.com/leggedrobotics/viplanner.git",
+            "dirty": false
+          }
+        }
+      ],
+      "repositories": [
+        {
+          "root": "<workspace-root>/src/viplanner_ws/src/viplanner",
+          "branch": "main",
+          "commit": "6fcf3c60f6fa3b28b3a11af054d6033825923789",
+          "origin": "https://github.com/leggedrobotics/viplanner.git",
+          "dirty": false
+        }
+      ]
+    }
+  ]
+}

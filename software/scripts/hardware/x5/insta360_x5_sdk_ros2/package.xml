@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>insta360_x5_sdk_ros2</name>
+  <version>0.1.0</version>
+  <description>ROS 2 adapter for Insta360 X5 CameraSDK preview streams on Jetson.</description>
+  <maintainer email="orin@example.com">lianaiwei deployment</maintainer>
+  <license>Proprietary-SDK-Adapter</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

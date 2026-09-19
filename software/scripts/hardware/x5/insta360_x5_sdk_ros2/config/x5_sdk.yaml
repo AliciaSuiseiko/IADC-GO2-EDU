@@ -1,0 +1,18 @@
+x5_sdk_node:
+  ros__parameters:
+    source_resolution: "1920x960"
+    source_bitrate: 8388608
+    output_width: 1920
+    output_height: 960
+    crop_top: 0
+    crop_bottom: 0
+    output_fps: 10.0
+    frame_id: camera
+    raw_topic: /camera/image
+    compressed_topic: /camera/image/compressed
+    publish_raw: true
+    jpeg_quality: 75
+    enable_in_camera_stitching: true
+    stitch_transport_enabled: false
+    stitch_server_host: "127.0.0.1"
+    stitch_server_port: 42101

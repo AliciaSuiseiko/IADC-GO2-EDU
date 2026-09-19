@@ -1,0 +1,10 @@
+x5_camera:
+  ros__parameters:
+    device: 0
+    gstreamer_pipeline: ""
+    width: 1920
+    height: 1080
+    fps: 30.0
+    frame_id: camera_link
+    publish_raw: false
+    jpeg_quality: 90

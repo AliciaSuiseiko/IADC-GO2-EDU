@@ -1,0 +1,26 @@
+diff --git a/src/semantic_mapping/semantic_mapping/detection_node.py b/src/semantic_mapping/semantic_mapping/detection_node.py
+--- a/src/semantic_mapping/semantic_mapping/detection_node.py
++++ b/src/semantic_mapping/semantic_mapping/detection_node.py
+@@ -91,6 +91,7 @@ class DetectNode(Node):
+         detector_factory, detector_task = detector_factories[detector_backend]
+         self.grounding_model = detector_factory(str(model_path), task=detector_task)
+         if detector_backend == 'yoloe' and model_path.suffix == '.pt':
++            self.detector_half = False
+             # Exported engines have prompts baked in; PyTorch checkpoints do not.
+             self.grounding_model.set_classes(prompt_classes)
+             self.log_info(
+@@ -98,4 +99,6 @@ class DetectNode(Node):
+                 f"Configured YOLOE with {len(prompt_classes)} text prompt classes")
++        else:
++            self.detector_half = model_path.suffix == '.engine'
+         self.log_info(f"Loaded {detector_backend} detector from {model_path}")
+ 
+         self.device = self.get_parameter('device').get_parameter_value().string_value
+@@ -142,6 +145,6 @@ class DetectNode(Node):
+         image = cv_image[:, :, ::-1]  # BGR to RGB
+         # image = image.copy()
+         start_time = time.time()
+-        results = self.grounding_model.track(image, imgsz=(640, 1920), half=True, conf=self.grounding_score_thresh, persist=True, tracker=self.CONFIG_DIR / "config/botsort.yaml")
++        results = self.grounding_model.track(image, imgsz=(640, 1920), half=self.detector_half, conf=self.grounding_score_thresh, persist=True, tracker=self.CONFIG_DIR / "config/botsort.yaml")
+         time1 = time.time()
+         boxes = results[0].boxes  # Boxes 对象

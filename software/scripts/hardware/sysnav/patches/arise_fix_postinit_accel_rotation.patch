@@ -1,0 +1,11 @@
+--- a/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
++++ b/src/slam/arise_slam_mid360/src/FeatureExtraction/featureExtraction.cpp
+@@ -1237,7 +1237,7 @@
+             double gravity = 9.8105;
+ 
+             gyr = imu_Init->imu_laser_R_Gravity * gyr;
+-            accel = imu_Init->imu_laser_R_Gravity * imudata->acc;
++            accel = imu_Init->imu_laser_R_Gravity * accel;
+ 
+             imudata->acc = accel*gravity/imu_Init->acc_mean.norm();
+             imudata->gyr = gyr;

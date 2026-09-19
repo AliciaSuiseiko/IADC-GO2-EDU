@@ -1,0 +1,23 @@
+diff --git a/src/semantic_mapping/semantic_mapping/detection_node.py b/src/semantic_mapping/semantic_mapping/detection_node.py
+--- a/src/semantic_mapping/semantic_mapping/detection_node.py
++++ b/src/semantic_mapping/semantic_mapping/detection_node.py
+@@ -69,6 +69,7 @@ class DetectNode(Node):
+         for value in self.label_template.values():
+             self.text_prompt_list += value['prompts']
+         self.text_prompt = " . ".join(self.text_prompt_list) + " ."
++        prompt_classes = list(self.text_prompt_list)
+         self.text_prompt_list = np.array(self.text_prompt_list)
+         print(f"Text prompt: {self.text_prompt}")
+ 
+@@ -90,6 +91,11 @@ class DetectNode(Node):
+             )
+         detector_factory, detector_task = detector_factories[detector_backend]
+         self.grounding_model = detector_factory(str(model_path), task=detector_task)
++        if detector_backend == 'yoloe' and model_path.suffix == '.pt':
++            # Exported engines have prompts baked in; PyTorch checkpoints do not.
++            self.grounding_model.set_classes(prompt_classes)
++            self.log_info(
++                f"Configured YOLOE with {len(prompt_classes)} text prompt classes")
+         self.log_info(f"Loaded {detector_backend} detector from {model_path}")
+ 
+         self.device = self.get_parameter('device').get_parameter_value().string_value

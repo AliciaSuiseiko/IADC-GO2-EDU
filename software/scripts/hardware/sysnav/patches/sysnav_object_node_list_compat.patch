@@ -1,0 +1,23 @@
+--- a/src/semantic_mapping/semantic_mapping/semantic_map_new.py
++++ b/src/semantic_mapping/semantic_mapping/semantic_map_new.py
+@@ -22 +22 @@
+-from tare_planner.msg import ObjectNode
++from tare_planner.msg import ObjectNode, ObjectNodeList
+@@ -579 +579 @@
+-        delete_msg.status = "deleted"
++        delete_msg.status = False
+@@ -587 +587,4 @@
+-        self.object_node_pub.publish(delete_msg)
++        delete_list_msg = ObjectNodeList()
++        delete_list_msg.header = delete_msg.header
++        delete_list_msg.nodes = [delete_msg]
++        self.object_node_pub.publish(delete_list_msg)
+@@ -790 +793 @@
+-            object_node_msg.status = getattr(single_obj, 'publish_status', 'new')
++            object_node_msg.status = True
+@@ -812 +815,4 @@
+-            self.object_node_pub.publish(object_node_msg)
++            object_node_list_msg = ObjectNodeList()
++            object_node_list_msg.header = object_node_msg.header
++            object_node_list_msg.nodes = [object_node_msg]
++            self.object_node_pub.publish(object_node_list_msg)

@@ -1,4 +1,4 @@
-# IADC GO2 EDU Jetson 与全景相机固定结构
+# IADC GO2 EDU 导航实验平台
 
 <p align="center">
   <img src="assets/jetson-base-cad.png" alt="GO2 EDU Jetson 底座 CAD 视图" width="720">
@@ -8,7 +8,7 @@
   <a href="README.md">English</a> · <strong>中文</strong>
 </p>
 
-本仓库记录了我在香港科技大学（广州）开展 GO2 EDU 导航与真机部署时完成的一套硬件适配。它在原有机器人传感器结构上增加了两层载荷空间，用于安装 Jetson、外部供电附件和 Insta360 X5 全景相机。
+本仓库记录了我在香港科技大学（广州）开展 GO2 EDU 导航与真机部署时完成的硬件和软件集成工作。除了用于 Jetson、供电附件和 Insta360 X5 的两层载荷结构，仓库也保存了 SysNav、LIO、SCAN-Planner、全景感知、深度和人物跟踪实验中使用的脚本、ROS 2 包、验证工具与上游补丁。
 
 本设计基于 `zhechen003` 开源的 [GO2-EDU Sensor Layout](https://github.com/zhechen003/GO2-EDU-sensor_layout) 修改。仓库保留了原作者、上游零件和 CERN-OHL-P-2.0 许可证。我的改动主要面向 Jetson/供电载荷底座和高位 X5 支架，不把上游的 Mid-360、RealSense 或 GO2 主安装结构作为个人原创。
 
@@ -52,6 +52,37 @@
 - 分布式全景深度与开放词汇感知实验。
 
 本仓库记录的是机械适配与真机部署工作，不主张对上游 GO2 传感器结构、SysNav、SCAN-Planner 或其算法的原创贡献。
+
+## 软件与复现记录
+
+[`software`](software/) 目录保存了实验过程中真正使用的集成代码：
+
+- Insta360 X5 UVC/GStreamer ROS 2 包；
+- Go2、Mid-360、LIO、SCAN-Planner 和 SysNav 的安全启动、诊断与验证脚本；
+- 全景人物跟踪、ReID、球面状态恢复和 DAP 客户端/服务端工具；
+- 针对上游项目的验证脚本和部分补丁。
+
+其中很多工作属于开源系统复现和接口适配，并没有刻意写成算法创新。上游仓库和实际使用的 commit 记录在 [`software/UPSTREAM_COMPONENTS.md`](software/UPSTREAM_COMPONENTS.md)。模型、数据集、录包、凭据和第三方完整源码没有重复上传。
+
+## 实验记录
+
+| SysNav 仿真 | X5/Mid-360 平台上的 SCAN-Planner |
+| --- | --- |
+| <img src="assets/results/sysnav-simulation.jpg" alt="SysNav 仿真记录" width="420"> | <img src="assets/results/scanplanner-rviz.png" alt="RViz 中的 SCAN-Planner 轨迹" width="420"> |
+
+| 全景相对深度 | 结合深度的开放词汇检测 |
+| --- | --- |
+| <img src="assets/results/dap-depth.png" alt="DAP 相对深度结果" width="420"> | <img src="assets/results/dap-detections.jpg" alt="结合相对深度的开放词汇检测" width="420"> |
+
+| Mid-360 原始投影 | 经过 DAP 一致性筛选后的投影 |
+| --- | --- |
+| <img src="assets/results/mid360-projection.png" alt="Mid-360 在 X5 全景图上的原始投影" width="420"> | <img src="assets/results/mid360-dap-gated.png" alt="经过 DAP 一致性筛选后保留的 Mid-360 点" width="420"> |
+
+这些图片用于记录部署过程，不代表相关算法由我提出。图中的 SCAN-Planner 结果是只运行规划器得到的轨迹预览，当时没有启动底盘控制器。
+
+## 详细工作记录
+
+完整中文时间线、工作区说明、完成度边界和接手建议见 [`docs/WORKLOG_ZH.md`](docs/WORKLOG_ZH.md)。13 个工作区与 114 个 ROS 包的自动扫描结果见 [`docs/jetson_ros_inventory_2026-09-20.json`](docs/jetson_ros_inventory_2026-09-20.json)。
 
 ## 制造与安全说明
 

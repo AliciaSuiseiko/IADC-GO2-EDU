@@ -1,0 +1,15 @@
+diff --git a/src/planner/plan_manage/launch/run.launch.py b/src/planner/plan_manage/launch/run.launch.py
+index 48cb06c..74e3113 100644
+--- a/src/planner/plan_manage/launch/run.launch.py
++++ b/src/planner/plan_manage/launch/run.launch.py
+@@ -33,8 +33,8 @@ def _setup(context):
+         sensor_pose = "/LIO/odom_imu"
+         cloud = "/LIO/clouds_lidar"
+         depth = "/camera/aligned_depth_to_color/image_raw"
+-        cloud_is_world = False
+-        need_extrinsic = True
++        cloud_is_world = True
++        need_extrinsic = False
+         intrinsics = {
+             "grid_map.cx": 317.19183349609375,
+             "grid_map.cy": 256.4806823730469,

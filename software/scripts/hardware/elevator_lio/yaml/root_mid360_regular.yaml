@@ -1,0 +1,3 @@
+sensor_config: "sensors/mid360_regular.yaml"
+runtime_config: "runtime/mapping_regular.yaml"
+logging_config: "logging/default.yaml"

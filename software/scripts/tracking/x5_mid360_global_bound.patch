@@ -1,0 +1,10 @@
+--- a/src/vlcal/calib/visual_camera_calibration.cpp
++++ b/src/vlcal/calib/visual_camera_calibration.cpp
+@@ -151,7 +151,7 @@
+     const Sophus::SE3d T_camera_lidar(values.data());
+     const Sophus::SE3d delta = init_T_camera_lidar.inverse() * T_camera_lidar;
+ 
+-    if (delta.translation().norm() > 0.2 || Eigen::AngleAxisd(delta.rotationMatrix()).angle() > 2.0 * M_PI / 180.0) {
++    if (delta.translation().norm() > 0.05 || Eigen::AngleAxisd(delta.rotationMatrix()).angle() > 1.0 * M_PI / 180.0) {
+       return false;
+     }

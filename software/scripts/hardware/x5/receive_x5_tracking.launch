@@ -1,0 +1,26 @@
+<launch>
+  <arg name="device" default="/dev/video0"/>
+  <arg name="output_fps" default="10"/>
+  <arg name="show_image" default="false"/>
+
+  <node pkg="receive_x5" exec="receiveX5" name="receiveX5Tracking" output="screen">
+    <param name="device" value="$(var device)"/>
+    <param name="imu_topic" value="/imu/data"/>
+    <param name="image_topic" value="/camera/image"/>
+    <param name="compressed_topic" value="/camera/image/compressed"/>
+    <param name="frame_id" value="camera"/>
+    <param name="input_width" value="2880"/>
+    <param name="input_height" value="1440"/>
+    <param name="input_fps" value="30"/>
+    <param name="output_fps" value="$(var output_fps)"/>
+    <param name="full_output_width" value="1920"/>
+    <param name="full_output_height" value="960"/>
+    <param name="crop_top" value="0"/>
+    <param name="crop_bottom" value="0"/>
+    <param name="image_latency" value="0.05"/>
+    <param name="compressed_quality" value="65"/>
+    <param name="always_publish_compressed" value="false"/>
+    <param name="always_publish_image" value="false"/>
+    <param name="show_image" value="$(var show_image)"/>
+  </node>
+</launch>

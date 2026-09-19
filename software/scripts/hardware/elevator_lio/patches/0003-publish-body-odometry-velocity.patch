@@ -1,0 +1,18 @@
+diff --git a/src/node/publish.cpp b/src/node/publish.cpp
+index 81221bc..80f3e18 100644
+--- a/src/node/publish.cpp
++++ b/src/node/publish.cpp
+@@ -102,6 +102,13 @@ void LIONode::publish_body_odometry(State state, double stamp_sec) {
+     odom_body.pose.pose.orientation.z = body_q.z();
+     odom_body.pose.pose.orientation.w = body_q.w();
+ 
++    // SCAN-Planner consumes body_pose velocity in the same world frame as the
++    // position trajectory. Preserve the ESKF world velocity here instead of
++    // leaving the vehicle odometry twist at its default zero value.
++    odom_body.twist.twist.linear.x = state.v(0);
++    odom_body.twist.twist.linear.y = state.v(1);
++    odom_body.twist.twist.linear.z = state.v(2);
++
+     if (state.in_elevator) {
+         odom_body.pose.pose.position.z += state.z;
+     }

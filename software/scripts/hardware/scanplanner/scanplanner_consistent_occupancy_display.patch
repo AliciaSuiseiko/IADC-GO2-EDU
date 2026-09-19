@@ -1,0 +1,33 @@
+diff --git a/src/planner/plan_env/src/grid_map.cpp b/src/planner/plan_env/src/grid_map.cpp
+index ce48f2f..1647ced 100644
+--- a/src/planner/plan_env/src/grid_map.cpp
++++ b/src/planner/plan_env/src/grid_map.cpp
+@@ -958,7 +958,12 @@ void GridMap::publishMap()
+ 
+         Eigen::Vector3d pos;
+         indexToPos(Eigen::Vector3i(x, y, z), pos);
+-        if (md_.has_ray_pose_ && pos(2) > md_.ray_pos_(2) + mp_.vis_height_)
++        // Inflation can move a source obstacle downward into the visible band.
++        // Keep every such source visible in the ordinary occupancy topic so
++        // occupancy and occupancy_inflate do not appear inconsistent in RViz.
++        const double source_vis_height =
++            mp_.vis_height_ + std::max(0.0, mp_.obstacles_inflation_z_down);
++        if (md_.has_ray_pose_ && pos(2) > md_.ray_pos_(2) + source_vis_height)
+           continue;
+         pt.x = pos(0);
+         pt.y = pos(1);
+diff --git a/src/planner/plan_manage/config/planner.yaml b/src/planner/plan_manage/config/planner.yaml
+index af6f824..07eb96b 100644
+--- a/src/planner/plan_manage/config/planner.yaml
++++ b/src/planner/plan_manage/config/planner.yaml
+@@ -22,7 +22,9 @@ scan_planner_node:
+     grid_map.double_cylinder_offset: 0.18
+     grid_map.body_height: 0.4
+     grid_map.obstacles_inflation_z_up: 0.1
+-    grid_map.obstacles_inflation_z_down: 0.4
++    # LiDAR is 0.15 m above the body center and the X5 reaches another
++    # 0.31 m above it. Use 0.50 m to include the full robot height plus margin.
++    grid_map.obstacles_inflation_z_down: 0.5
+     grid_map.frame_id: world
+     grid_map.sliding_map_frame_id: sliding_map
+     grid_map.ground_height: 0.0

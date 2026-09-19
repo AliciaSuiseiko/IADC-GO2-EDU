@@ -1,0 +1,18 @@
+x5_sdk_node:
+  ros__parameters:
+    source_resolution: 1920x960
+    source_bitrate: 524288
+    enable_in_camera_stitching: false
+    output_width: 1920
+    output_height: 960
+    crop_top: 0
+    crop_bottom: 0
+    output_fps: 5.0
+    timestamp_delay_sec: 0.218
+    jpeg_quality: 65
+    publish_raw: true
+    raw_topic: /camera/x5_lens/image
+    compressed_topic: /camera/x5_lens/image/compressed
+    stitch_transport_enabled: true
+    stitch_server_host: 127.0.0.1
+    stitch_server_port: 42101
