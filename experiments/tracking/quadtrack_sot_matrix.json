@@ -1,0 +1,184 @@
+{
+  "runs": [
+    {
+      "detector": "yolo11n",
+      "sequence": "0015",
+      "target_id": 1,
+      "frames": 600,
+      "mean_circular_iou": 0.8863081350279485,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.5465076107769707,
+      "mean_end_to_end_fps": 22.682280473910424,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0015",
+      "target_id": 2,
+      "frames": 600,
+      "mean_circular_iou": 0.8917388802622774,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.6324924564923843,
+      "mean_end_to_end_fps": 22.955830197038264,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0016",
+      "target_id": 1,
+      "frames": 600,
+      "mean_circular_iou": 0.8672643178698091,
+      "success_at_iou_0_5": 0.9983333333333333,
+      "mean_bearing_error_deg": 0.5073939266751191,
+      "mean_end_to_end_fps": 23.22990045574902,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0016",
+      "target_id": 2,
+      "frames": 574,
+      "mean_circular_iou": 0.8453159245238993,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.5664161307976335,
+      "mean_end_to_end_fps": 24.10940710636512,
+      "corrections": 0,
+      "identity_rejections": 2
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0017",
+      "target_id": 3,
+      "frames": 600,
+      "mean_circular_iou": 0.7492377780045737,
+      "success_at_iou_0_5": 0.9783333333333334,
+      "mean_bearing_error_deg": 1.0994633387706934,
+      "mean_end_to_end_fps": 22.26807117053783,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0017",
+      "target_id": 4,
+      "frames": 600,
+      "mean_circular_iou": 0.8358842283254403,
+      "success_at_iou_0_5": 0.9966666666666667,
+      "mean_bearing_error_deg": 0.8288634457421747,
+      "mean_end_to_end_fps": 22.71054117416158,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo11n",
+      "sequence": "0017",
+      "target_id": 9,
+      "frames": 553,
+      "mean_circular_iou": 0.020938463970808882,
+      "success_at_iou_0_5": 0.018083182640144666,
+      "mean_bearing_error_deg": 47.915340184487825,
+      "mean_end_to_end_fps": 22.40115516956272,
+      "corrections": 1,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0015",
+      "target_id": 1,
+      "frames": 600,
+      "mean_circular_iou": 0.8863081350279485,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.5465076107769707,
+      "mean_end_to_end_fps": 24.106670397083295,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0015",
+      "target_id": 2,
+      "frames": 600,
+      "mean_circular_iou": 0.8917388802622774,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.6324924564923843,
+      "mean_end_to_end_fps": 25.007879622673496,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0016",
+      "target_id": 1,
+      "frames": 600,
+      "mean_circular_iou": 0.8672643178698091,
+      "success_at_iou_0_5": 0.9983333333333333,
+      "mean_bearing_error_deg": 0.5073939266751191,
+      "mean_end_to_end_fps": 22.910345473818786,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0016",
+      "target_id": 2,
+      "frames": 574,
+      "mean_circular_iou": 0.8453159245238993,
+      "success_at_iou_0_5": 1.0,
+      "mean_bearing_error_deg": 0.5664161307976335,
+      "mean_end_to_end_fps": 25.375640630945725,
+      "corrections": 0,
+      "identity_rejections": 2
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0017",
+      "target_id": 3,
+      "frames": 600,
+      "mean_circular_iou": 0.7494897790652879,
+      "success_at_iou_0_5": 0.9783333333333334,
+      "mean_bearing_error_deg": 1.0988694852386685,
+      "mean_end_to_end_fps": 24.61966399835514,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0017",
+      "target_id": 4,
+      "frames": 600,
+      "mean_circular_iou": 0.8358842283254403,
+      "success_at_iou_0_5": 0.9966666666666667,
+      "mean_bearing_error_deg": 0.8288634457421747,
+      "mean_end_to_end_fps": 24.420280098367495,
+      "corrections": 0,
+      "identity_rejections": 0
+    },
+    {
+      "detector": "yolo26n",
+      "sequence": "0017",
+      "target_id": 9,
+      "frames": 553,
+      "mean_circular_iou": 0.020938463970808882,
+      "success_at_iou_0_5": 0.018083182640144666,
+      "mean_bearing_error_deg": 48.21350266371978,
+      "mean_end_to_end_fps": 25.708927442172545,
+      "corrections": 0,
+      "identity_rejections": 0
+    }
+  ],
+  "yolo11n": {
+    "mean_circular_iou": 0.7280982468549653,
+    "success_at_iou_0_5": 0.8559166451390683,
+    "mean_bearing_error_deg": 7.442353870534686,
+    "mean_end_to_end_fps": 22.908169392474996
+  },
+  "yolo26n": {
+    "mean_circular_iou": 0.7281342470064959,
+    "success_at_iou_0_5": 0.8559166451390683,
+    "mean_bearing_error_deg": 7.484863674206104,
+    "mean_end_to_end_fps": 24.59277252334521
+  }
+}

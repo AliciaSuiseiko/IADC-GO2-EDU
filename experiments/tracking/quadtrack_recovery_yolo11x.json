@@ -1,0 +1,30 @@
+{
+  "targets": 3,
+  "events": 12,
+  "successful_recoveries": 3,
+  "recovery_rate": 0.25,
+  "mean_recovery_delay_frames": 2.6666666666666665,
+  "per_target": [
+    {
+      "sequence": "0016",
+      "target_id": 2,
+      "events": 1,
+      "recovery_rate": 1.0,
+      "mean_recovery_delay_frames": 8.0
+    },
+    {
+      "sequence": "0017",
+      "target_id": 13,
+      "events": 4,
+      "recovery_rate": 0.5,
+      "mean_recovery_delay_frames": 0.0
+    },
+    {
+      "sequence": "0017",
+      "target_id": 9,
+      "events": 7,
+      "recovery_rate": 0.0,
+      "mean_recovery_delay_frames": null
+    }
+  ]
+}

@@ -64,6 +64,8 @@
 
 其中很多工作属于开源系统复现和接口适配，并没有刻意写成算法创新。上游仓库和实际使用的 commit 记录在 [`software/UPSTREAM_COMPONENTS.md`](software/UPSTREAM_COMPONENTS.md)。模型、数据集、录包、凭据和第三方完整源码没有重复上传。
 
+服务器端筛选出的 Tracking 指标摘要保存在 [`experiments/tracking`](experiments/tracking/)；其中同时保留了失败结果和真值初始化等评估边界。原始数据集、模型权重、内部日志和服务器信息不进入公开仓库。
+
 ## 实验记录
 
 | SysNav 仿真 | X5/Mid-360 平台上的 SCAN-Planner |

@@ -64,6 +64,8 @@ The [`software`](software/) directory preserves the integration code that made t
 
 Many upstream systems were reproduced or adapted with limited algorithmic modification. They are credited with pinned source revisions in [`software/UPSTREAM_COMPONENTS.md`](software/UPSTREAM_COMPONENTS.md). Models, datasets, bags, credentials, and third-party source trees are not redistributed.
 
+Selected server-side tracking metrics are preserved in [`experiments/tracking`](experiments/tracking/). The records include negative results and evaluation boundaries such as ground-truth initialization; raw datasets, model weights, internal logs, and server details remain outside the public repository.
+
 ## Experiment Records
 
 | SysNav simulation | SCAN-Planner on the X5/Mid-360 platform |
